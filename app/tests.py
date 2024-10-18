@@ -4,6 +4,7 @@ from django.test import SimpleTestCase
 class TestHeyYou(SimpleTestCase):
     def test_hey_nate(self):
         response = self.client.get("/hey/nate")
+        print(response)
         self.assertContains(response, "Hey, nate!")
 
     def test_hey_bcca(self):
